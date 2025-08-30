@@ -5,8 +5,18 @@ import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,  
+      once: true,    
+    });
+  }, []);
+  
   return (
     <div className="min-h-screen bg-[#f0f2f3] text-white">
       <NavBar sectionId="hero" />

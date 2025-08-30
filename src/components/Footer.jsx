@@ -14,10 +14,10 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Layanan</h4>
+            <h4 className="text-brand font-semibold mb-4">Layanan</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-brand transition-colors">
+                <a href="#" className="text-gray-300 hover:underline transition-colors">
                   Advertising
                 </a>
               </li>
@@ -26,8 +26,8 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Kontak</h4>
-            <div className="space-y-2 text-gray-400">
+            <h4 className="text-brand font-semibold mb-4">Kontak</h4>
+            <div className="space-y-2 text-gray-300">
               <p>Jl. Bagawantabari, Kepung,</p>
               <p>Kediri, Jawa Timur</p>
               <p>Email: xxx@gmail.com</p>

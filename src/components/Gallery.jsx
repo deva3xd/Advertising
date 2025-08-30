@@ -15,17 +15,17 @@ export default function Gallery() {
     { image:Gambar6, alt: "Showcase 6" },
   ]
   return (
-    <section id="galeri" className="py-16 lg:py-24 bg-[#d9d9d9]">
+    <section id="galeri" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 rubik-font">GALERI</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4 rubik-font">GALERI</h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryItems.map((item, index) => (
             <div
               key={index}
-              className="aspect-square bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="aspect-square bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="zoom-in"
             >
               <img
                 src={item.image}
