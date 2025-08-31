@@ -39,7 +39,7 @@ export default function About() {
               <div className="rounded-lg text-black p-10 border-4 border-black flex justify-center items-center">
                 <Hourglass size={90} />
               </div>
-              <span className="font-medium flex justify-center mt-2 text-black text-base">Pembuatan</span>
+              <span className="font-medium flex justify-center mt-2 text-black text-base">Pengerjaan</span>
             </div>
             <div className="w-1/2 md:w-full">
               <div className="rounded-lg text-black p-10 border-4 border-black flex justify-center items-center">
