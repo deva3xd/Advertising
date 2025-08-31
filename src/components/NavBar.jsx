@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function NavBar({ sectionId }) {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const items = [
     {
       name: "Beranda",
@@ -48,11 +49,11 @@ export default function NavBar({ sectionId }) {
           CREASINDO
         </span>
         <button
-          data-collapse-toggle="navbar-default"
+          onClick={() => setIsOpen(!isOpen)}
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none cursor-pointer"
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded={isOpen}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -71,7 +72,7 @@ export default function NavBar({ sectionId }) {
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`} id="navbar-default">
           <ul className="font-medium flex flex-col mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             {items.map((item, index) => {
               return (

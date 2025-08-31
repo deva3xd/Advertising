@@ -32,8 +32,6 @@ export default function Hero() {
             <span className="anton-font text-2xl text-brand font-bold">
               CREASINDO
             </span>
-
-            {/* Toggle Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -58,12 +56,10 @@ export default function Hero() {
                 />
               </svg>
             </button>
-
-            {/* Menu */}
             <div
               id="navbar-hero"
               className={`${isOpen ? "block" : "hidden"
-                } absolute top-full left-0 w-full bg-black md:static md:block md:w-auto`}
+                } absolute top-full left-0 w-full md:static md:block md:w-auto`}
             >
               <ul className="font-medium flex flex-col mt-4 md:mt-0 md:flex-row md:space-x-8 rtl:space-x-reverse">
                 {items.map((item, index) => (
@@ -81,7 +77,6 @@ export default function Hero() {
           </div>
         </nav>
 
-        {/* Hero Title */}
         <div>
           <h1 className="text-white anton-font uppercase font-bold text-2xl sm:text-3xl md:text-6xl">
             <TypewriterComponent
@@ -98,8 +93,6 @@ export default function Hero() {
             />
           </h1>
         </div>
-
-        {/* Subtitle */}
         <p className="font-light text-xs sm:text-lg text-white mb-6 rubik-font">
           Selamat Datang di Web Profile{" "}
           <span className="text-brand">CREASINDO</span>
