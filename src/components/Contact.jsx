@@ -32,20 +32,20 @@ export default function Contact() {
       <div className="relative z-10 max-w-screen-xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="space-y-4">
-            <h2 className="text-lg lg:text-6xl font-bold text-brand mb-4">CREASINDO</h2>
-            <p className="text-gray-200 leading-relaxed font-extralight text-3xl">
+            <h2 className="text-3xl lg:text-6xl font-bold text-brand">CREASINDO</h2>
+            <p className="text-gray-200 leading-relaxed font-extralight text-base sm:text-3xl my-4">
               Jl. Bagawantabari, Ds. Siman, Kec. Kepung, Kab. Kediri, Jawa Timur
             </p>
             <div className="flex items-center space-x-4">
               <Mail className="text-white mt-1 flex-shrink-0" size={24} />
               <div>
-                <p className="text-gray-200 text-xl">xxx@gmail.com</p>
+                <p className="text-gray-200 text-base sm:text-xl">xxx@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <Phone className="text-white mt-1 flex-shrink-0" size={24} />
               <div>
-                <p className="text-gray-200 text-xl">+62 xxx-xxxx-xxxx</p>
+                <p className="text-gray-200 text-base sm:text-xl">+62 xxx-xxxx-xxxx</p>
               </div>
             </div>
             <a

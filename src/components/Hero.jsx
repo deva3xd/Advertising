@@ -81,16 +81,16 @@ export default function Hero() {
 
       <div className="max-w-screen-xl mx-auto">
         <div className="flex flex-col justify-between mt-12 mb-8">
-          <div className="flex text-white items-center">
-            <div className="w-1/2">
-              <h1 className="text-5xl font-bold">Selamat datang di web profile <span className="text-brand">CREASINDO</span></h1>
-              <p className="font-normal text-xl mt-4">Kami membuat iklan untuk dapat menjangkau orang yang tepat dan waktu yang tepat.</p>
+          <div className="flex flex-col-reverse sm:flex-row text-white items-center">
+            <div className="w-full sm:w-1/2">
+              <h1 className="text-4xl sm:text-5xl text-center sm:text-start font-bold">Selamat datang di web profile <span className="text-brand">CREASINDO</span></h1>
+              <p className="font-normal text-base sm:text-xl mt-3">Kami membuat iklan untuk dapat menjangkau orang yang tepat dan waktu yang tepat.</p>
             </div>
-            <div className="w-1/2 flex justify-center">
+            <div className="w-full sm:w-1/2 flex justify-center">
               <img src={Meeting} width={500} alt="Meeting" />
             </div>
           </div>
-          <div className="text-white flex gap-4 items-center justify-between">
+          <div className="text-white flex flex-col sm:flex-row gap-4 items-center justify-between mt-3">
             <a href="#contact" className="bg-brand px-8 py-2 rounded-md text-black hover:bg-brand/90 flex items-center gap-1">
               Hubungi Sekarang <ArrowUpRight size={28} />
             </a>

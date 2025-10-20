@@ -16,7 +16,7 @@ export default function Gallery() {
   ]
   return (
     <section id="gallery" className="py-20">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">GALERI</h2>
         </div>

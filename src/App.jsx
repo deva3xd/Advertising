@@ -19,7 +19,7 @@ function App() {
   
   return (
     <>
-      <NavBar sectionId="hero" />
+      <NavBar sectionId="home" />
       <main>
         <Hero />
         <About />
