@@ -18,7 +18,7 @@ function App() {
   }, []);
   
   return (
-    <div className="min-h-screen bg-[#f0f2f3] text-white">
+    <>
       <NavBar sectionId="hero" />
       <main>
         <Hero />
@@ -27,7 +27,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 

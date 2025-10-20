@@ -11,7 +11,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
+
     console.log("Form submitted:", formData)
   }
 
@@ -21,47 +21,46 @@ export default function Contact() {
       [e.target.name]: e.target.value,
     })
   }
+
   return (
     <section
+      className="relative py-20 bg-cover bg-center px-4 sm:px-6 lg:px-16"
       id="contact"
-      className="relative py-20 bg-cover bg-center"
       style={{ backgroundImage: `url(${Map})` }}
     >
       <div className="absolute inset-0 bg-black/70"></div>
-
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-24">
-        <h2 className="text-base lg:text-xl font-normal text-white rubik-font mb-4">CREASINDO</h2>
+      <div className="relative z-10 max-w-screen-xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-6">
-          <div className="space-y-4 border-t border-white">
-            <p className="text-gray-200 leading-relaxed font-extralight text-2xl">
-              Jl. Bagawantabari, Kec. Kepung, Kab. Kediri, Jawa Timur
+          <div className="space-y-4">
+            <h2 className="text-lg lg:text-6xl font-bold text-brand mb-4">CREASINDO</h2>
+            <p className="text-gray-200 leading-relaxed font-extralight text-3xl">
+              Jl. Bagawantabari, Ds. Siman, Kec. Kepung, Kab. Kediri, Jawa Timur
             </p>
-            <div className="flex items-center space-x-4 rubik-font">
-              <Phone className="text-white mt-1 flex-shrink-0" size={26} />
+            <div className="flex items-center space-x-4">
+              <Mail className="text-white mt-1 flex-shrink-0" size={24} />
               <div>
-                <p className="text-gray-200">+62 xxx-xxxx-xxxx</p>
+                <p className="text-gray-200 text-xl">xxx@gmail.com</p>
               </div>
             </div>
-
-            <div className="flex items-center space-x-4 rubik-font">
-              <Mail className="text-white mt-1 flex-shrink-0" size={26} />
+            <div className="flex items-center space-x-4">
+              <Phone className="text-white mt-1 flex-shrink-0" size={24} />
               <div>
-                <p className="text-gray-200">xxx@gmail.com</p>
+                <p className="text-gray-200 text-xl">+62 xxx-xxxx-xxxx</p>
               </div>
             </div>
             <a
               href="https://www.google.com/maps/place/7%C2%B048'41.5%22S+112%C2%B017'14.7%22E/@-7.8115097,112.2848361,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-7.811515!4d112.287411?authuser=1&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
-              className="inline-block font-bold px-5 py-2 border-2 border-brand hover:bg-brand text-white hover:text-black rounded-sm transition-colors"
+              className="inline-block font-normal px-5 py-2 border-2 border-brand hover:bg-brand text-white hover:text-black rounded-sm transition-colors"
             >
               Google Maps
             </a>
           </div>
 
-          {/* Contact Form */}
-          <div className="rounded-sm">
+          {/* contact form */}
+          <div>
             <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
+                <label htmlFor="name" className="block text-white font-medium mb-1 text-sm">
                   Nama
                 </label>
                 <input
@@ -76,7 +75,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
+                <label htmlFor="email" className="block text-white font-medium mb-1 text-sm">
                   Email
                 </label>
                 <input
@@ -91,7 +90,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white font-medium mb-2">
+                <label htmlFor="message" className="block text-white font-medium mb-1 text-sm">
                   Pesan
                 </label>
                 <textarea
@@ -107,7 +106,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="font-bold px-5 py-2 border-2 border-brand hover:bg-brand text-white hover:text-black rounded-sm transition-colors disabled:bg-brand disabled:text-black disabled:opacity-60"
+                className="font-normal px-5 py-2 border-2 border-brand hover:bg-brand text-white hover:text-black rounded-sm transition-colors disabled:bg-brand disabled:text-black disabled:opacity-60"
                 disabled
               >
                 Kirim Pesan

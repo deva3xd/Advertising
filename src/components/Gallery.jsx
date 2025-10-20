@@ -15,10 +15,10 @@ export default function Gallery() {
     { image:Gambar6, alt: "Showcase 6" },
   ]
   return (
-    <section id="galeri" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" className="py-20">
+      <div className="max-w-screen-xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4 rubik-font">GALERI</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">GALERI</h2>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
@@ -31,6 +31,7 @@ export default function Gallery() {
                 src={item.image}
                 alt={item.alt}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
           ))}
