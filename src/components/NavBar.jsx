@@ -6,7 +6,7 @@ export default function NavBar({ sectionId }) {
   const items = [
     {
       name: "Beranda",
-      link: "#",
+      link: "#home",
     },
     {
       name: "Tentang Kami",
@@ -14,7 +14,7 @@ export default function NavBar({ sectionId }) {
     },
     {
       name: "Galeri",
-      link: "#galeri",
+      link: "#gallery",
     },
     {
       name: "Kontak",
@@ -39,13 +39,13 @@ export default function NavBar({ sectionId }) {
 
   return (
     <nav
-      className={`bg-black fixed top-0 w-full py-4 px-4 sm:px-6 lg:px-8 mx-0 z-50 transform ${showNavbar
+      className={`bg-black fixed top-0 w-full py-4 px-4 sm:px-6 lg:px-16 mx-0 z-50 transform ${showNavbar
         ? "translate-y-0 transition-all duration-300 delay-75"
         : "-translate-y-full transition-all duration-300 delay-75"
         }`}
     >
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-        <span className="anton-font text-2xl text-brand font-bold">
+      <div className="flex flex-wrap items-center justify-between mx-auto">
+        <span className="anton-regular text-2xl text-brand font-bold">
           CREASINDO
         </span>
         <button
@@ -79,7 +79,7 @@ export default function NavBar({ sectionId }) {
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:p-0 rubik-font text-sm uppercase hover:opacity-75"
+                    className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:p-0 text-sm uppercase hover:opacity-75"
                     aria-current="page"
                   >
                     {item.name}
