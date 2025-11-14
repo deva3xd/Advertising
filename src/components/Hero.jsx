@@ -9,24 +9,28 @@ export default function Hero() {
   const items = [
     {
       name: "Beranda",
-      link: "#home"
+      link: "#home",
     },
     {
       name: "Tentang Kami",
-      link: "#about"
+      link: "#about",
     },
     {
       name: "Galeri",
-      link: "#gallery"
+      link: "#gallery",
     },
     {
       name: "Kontak",
-      link: "#contact"
+      link: "#contact",
     },
-  ]
+  ];
 
   return (
-    <section id="home" className="bg-black py-4 px-4 sm:px-6 lg:px-16" ref={section1Ref}>
+    <section
+      id="home"
+      className="bg-black py-4 px-4 sm:px-6 lg:px-16"
+      ref={section1Ref}
+    >
       {/* navbar */}
       <nav className="bg-black w-full">
         <div className="flex flex-wrap items-center justify-between mx-auto relative">
@@ -36,33 +40,55 @@ export default function Hero() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none cursor-pointer"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-md md:hidden hover:bg-gray-100 focus:outline-none cursor-pointer"
             aria-controls="navbar-hero"
             aria-expanded={isOpen}
           >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
+            {!isOpen ? (
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path
+                    d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  ></path>{" "}
+                </g>
+              </svg>
+            )}
           </button>
           <div
             id="navbar-hero"
             className={`${isOpen ? "block" : "hidden"
-              } absolute top-full left-0 w-full md:static md:block md:w-auto`}
+              } absolute top-full left-0 w-full md:static md:block md:w-auto bg-black`}
           >
-            <ul className="font-medium flex flex-col mt-4 md:mt-0 md:flex-row md:space-x-8 rtl:space-x-reverse">
+            <ul className="font-medium flex flex-col mt-4 md:mt-0 md:flex-row md:space-x-8 rtl:space-x-reverse pb-4 md:pb-0">
               {items.map((item, index) => (
                 <li key={index}>
                   <a
@@ -83,15 +109,24 @@ export default function Hero() {
         <div className="flex flex-col justify-between mt-12 mb-8">
           <div className="flex flex-col-reverse sm:flex-row text-white items-center">
             <div className="w-full sm:w-1/2">
-              <h1 className="text-4xl sm:text-5xl text-center sm:text-start font-bold">Selamat datang di web profile <span className="text-brand">CREASINDO</span></h1>
-              <p className="font-normal text-base sm:text-xl mt-3">Kami membuat iklan untuk dapat menjangkau orang yang tepat dan waktu yang tepat.</p>
+              <h1 className="text-4xl sm:text-5xl text-center sm:text-start font-bold">
+                Selamat datang di web profile{" "}
+                <span className="text-brand">CREASINDO</span>
+              </h1>
+              <p className="font-normal text-base sm:text-xl mt-3">
+                Kami membuat iklan untuk dapat menjangkau orang yang tepat dan
+                waktu yang tepat.
+              </p>
             </div>
             <div className="w-full sm:w-1/2 flex justify-center">
               <img src={Meeting} width={500} alt="Meeting" />
             </div>
           </div>
           <div className="text-white flex flex-col sm:flex-row gap-4 items-center justify-between mt-3">
-            <a href="#contact" className="bg-brand px-8 py-2 rounded-md text-black hover:bg-brand/90 flex items-center gap-1">
+            <a
+              href="#contact"
+              className="bg-brand px-8 py-2 rounded-md text-black hover:bg-brand/90 flex items-center gap-1"
+            >
               Hubungi Sekarang <ArrowUpRight size={28} />
             </a>
             <div className="h-[1px] flex-1 bg-white"></div>
